@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Clean Blog - Start Bootstrap Theme
+
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        include includes/css.pug
+
+    body
+
+        include includes/navbar.pug
+
+        // Page Header
+        header.masthead(style="background-image: url('assets/img/cn.avif')")
+            .container.position-relative.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-md-10.col-lg-8.col-xl-7
+                        .site-heading
+                            h1 🇨🇳
+                            span.subheading Latest headlines in the China
+
+        // Main Content
+        .container.px-4.px-lg-5
+            .row.gx-4.gx-lg-5.justify-content-center
+                .col-md-10.col-lg-8.col-xl-7
+
+                    // Post preview
+                    .post-preview
+                        a(href='post.html')
+                            h2.post-title
+                                | 简体中文标题
+                            h3.post-subtitle
+                                | 简体中文标题副标题
+                        p.post-meta
+                            | Posted by
+                            a(href='#!') Start Bootstrap
+                            | on September 24, 2021
+                    
+                    // Divider
+                    hr.my-4
+                    
+                    // Pager
+                    .d-flex.justify-content-end.mb-4
+                        a.btn.btn-primary.text-uppercase(href='#!') Page 2
+        
+        include includes/footer.pug
+
+        include includes/scripts.pug
