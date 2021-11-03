@@ -32,6 +32,14 @@ const controlScroll = function () {
 
 const controlSearchResults = async function () {
   ResultsView.renderSpinner();
+
+  // 1) Get search query
+
+  // 2) Load search results
+
+  // 3) Render results
+  ResultsView.render();
+  // 4) Render inital pagination
 };
 
 const init = function () {
