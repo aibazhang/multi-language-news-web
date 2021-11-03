@@ -1,3 +1,5 @@
+import ResultsView from "./views/resultsView.js";
+
 const controlScroll = function () {
   window.addEventListener("DOMContentLoaded", () => {
     let scrollPos = 0;
@@ -28,8 +30,13 @@ const controlScroll = function () {
   });
 };
 
+const controlSearchResults = async function () {
+  ResultsView.renderSpinner();
+};
+
 const init = function () {
   controlScroll();
+  controlSearchResults();
 };
 
 init();
