@@ -1,6 +1,5 @@
 import ResultsView from "./views/resultsView.js";
-import { AJAX } from "./helper.js";
-import { newsAPIkey } from "./apiKey.js";
+import { loadNews } from "./model.js";
 
 const controlScroll = function () {
   window.addEventListener("DOMContentLoaded", () => {
@@ -37,13 +36,11 @@ const controlSearchResults = async function () {
 
   // 1) Get search query
 
-  // 2) Load search results
-  const data = AJAX(
-    `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsAPIkey}`
-  );
-  console.log(data);
+  // 2) Load search News' results
+  const news = await loadNews();
+
   // 3) Render results
-  ResultsView.render();
+  ResultsView.render(news);
   // 4) Render inital pagination
 };
 
