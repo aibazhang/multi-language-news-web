@@ -34,14 +34,13 @@ const controlScroll = function () {
 const controlSearchResults = async function () {
   ResultsView.renderSpinner();
 
-  // 1) Get search query
-
-  // 2) Load search News' results
+  // 1) Load search results of news
   const news = await loadNews();
 
-  // 3) Render results
+  // 2) Render results
   ResultsView.render(news);
-  // 4) Render inital pagination
+
+  // 3) Render inital pagination
 };
 
 const init = function () {
