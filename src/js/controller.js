@@ -1,3 +1,6 @@
+import ResultsView from "./views/resultsView.js";
+import { loadNews } from "./model.js";
+
 const controlScroll = function () {
   window.addEventListener("DOMContentLoaded", () => {
     let scrollPos = 0;
@@ -28,8 +31,21 @@ const controlScroll = function () {
   });
 };
 
+const controlSearchResults = async function () {
+  ResultsView.renderSpinner();
+
+  // 1) Load search results of news
+  const news = await loadNews();
+
+  // 2) Render results
+  ResultsView.render(news);
+
+  // 3) Render inital pagination
+};
+
 const init = function () {
   controlScroll();
+  controlSearchResults();
 };
 
 init();
