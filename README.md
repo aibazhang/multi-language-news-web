@@ -5,9 +5,9 @@ A multi-language news web application
 ## Todo
 
 - [x] Initialize MVC model
-- [ ] Add features to cache request / reponse
 - [ ] Pagination
 - [ ] Extend to zh-tw, zh-cn, jp-jp
+- [ ] Setup Nginx
 - [ ] Publish to Github IO
 
 ---

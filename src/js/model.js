@@ -1,6 +1,14 @@
 import { AJAX } from "./helper.js";
 import { newsAPIkey } from "./apiKey.js";
 
+const pathNameToCountry = {
+  "/": "us",
+  "/index.html": "us",
+  "/jp.html": "jp",
+  "/cn.html": "cn",
+  "/tw.html": "tw",
+};
+
 const createNewsObject = function (article) {
   return {
     title: article.title,
@@ -17,7 +25,9 @@ const createNewsObject = function (article) {
 export const loadNews = async function () {
   try {
     const data = await AJAX(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsAPIkey}`
+      `https://newsapi.org/v2/top-headlines?country=${
+        pathNameToCountry[location.pathname]
+      }&apiKey=${newsAPIkey}`
     );
     console.log(data.articles);
     return data.articles.map((a) => createNewsObject(a));
