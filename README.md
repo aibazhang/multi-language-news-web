@@ -6,7 +6,7 @@ A multi-language news web application
 
 - [x] Initialize MVC model
 - [ ] Pagination
-- [ ] Extend to zh-tw, zh-cn, jp-jp
+- [x] Extend to zh-tw, zh-cn, jp-jp
 - [ ] Setup Nginx
 - [ ] Publish to Github IO
 
