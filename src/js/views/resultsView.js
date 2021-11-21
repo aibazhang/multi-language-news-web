@@ -29,13 +29,14 @@ class ResultsView {
       .map(
         (result) => `
         <div class="post-preview">
-          <a href="${result.url}">
+          <a target="_blank" href="${result.url}">
               <h2 class="post-title">${result.title}</h2>
               <h3 class="post-subtitle">${result.description}</h3>
           </a>
+          
           <p class="post-meta">
               Posted by
-              <a href="#!">${result.author}</a>
+              ${result.author}
               on ${result.publishedTimeLocal}
           </p>
         </div>
